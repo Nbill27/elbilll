@@ -1,12 +1,10 @@
--- elbilll Universal Loader (Animated)
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
-
 local GARDEN_HORIZONS = 130594398886540
 local VIOLENCE_DISTRICT = 93978595733734
 
--- UI Creation
+
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "ElbilllLoader"
 ScreenGui.ResetOnSpawn = false
@@ -33,7 +31,7 @@ Logo.TextTransparency = 1
 Logo.Parent = MainFrame
 
 local Glow = Instance.new("UIStroke")
-Glow.Color = Color3.fromRGB(138, 43, 226) -- Amethyst/Purple glow
+Glow.Color = Color3.fromRGB(138, 43, 226)
 Glow.Thickness = 0
 Glow.Transparency = 1
 Glow.Parent = Logo
@@ -66,7 +64,6 @@ ProgressBar.Parent = BarBackground
 Instance.new("UICorner", BarBackground).CornerRadius = UDim.new(1, 0)
 Instance.new("UICorner", ProgressBar).CornerRadius = UDim.new(1, 0)
 
--- Animations
 local function fade(instance, property, value, duration)
     TweenService:Create(instance, TweenInfo.new(duration, Enum.EasingStyle.Quart), {[property] = value}):Play()
 end
@@ -76,9 +73,7 @@ local function setStatus(text)
     StatusLabel.TextTransparency = 0.5
 end
 
--- Loading Sequence
 task.spawn(function()
-    -- Fade In
     fade(MainFrame, "BackgroundTransparency", 0, 0.5)
     task.wait(0.5)
     fade(Logo, "TextTransparency", 0, 0.8)
@@ -90,7 +85,6 @@ task.spawn(function()
     fade(StatusLabel, "TextTransparency", 0.5, 0.5)
     fade(BarBackground, "BackgroundTransparency", 0, 0.5)
     
-    -- Simulate progress
     local function loadProgress(target, status, duration)
         setStatus(status)
         TweenService:Create(ProgressBar, TweenInfo.new(duration, Enum.EasingStyle.Sine), {Size = UDim2.new(target, 0, 1, 0)}):Play()
@@ -103,20 +97,17 @@ task.spawn(function()
     
     task.wait(0.2)
     
-    -- Game logic
     local function executeScript()
         if game.PlaceId == GARDEN_HORIZONS then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/GardenHorizons.lua"))()
         elseif game.PlaceId == VIOLENCE_DISTRICT then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/script.lua"))()
         else
-            -- Fallback
             warn("[elbilll] Game tidak didukung oleh loader. PlaceId: " .. tostring(game.PlaceId))
             Player:Kick("[elbilll] Game ini tidak didukung.")
         end
     end
     
-    -- Fade Out
     fade(Logo, "TextTransparency", 1, 0.5)
     fade(Glow, "Transparency", 1, 0.5)
     fade(StatusLabel, "TextTransparency", 1, 0.5)
@@ -124,9 +115,10 @@ task.spawn(function()
     fade(ProgressBar, "BackgroundTransparency", 1, 0.5)
     task.wait(0.3)
     
-    executeScript() -- Load setalah animasi hampir selesai
+    executeScript()
     
     fade(MainFrame, "BackgroundTransparency", 1, 0.5)
     task.wait(0.5)
     ScreenGui:Destroy()
 end)
+
