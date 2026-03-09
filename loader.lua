@@ -1,3 +1,4 @@
+
 local Players      = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local Player       = Players.LocalPlayer
@@ -16,14 +17,17 @@ local scripts = {
     [SNIPER_ARENA]      = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/sa.lua",
 }
 
+
 local url = scripts[game.PlaceId]
+
 if url then
-    loadstring(game:HttpGet(url))()
-    return
+    local success, result = pcall(function()
+        return game:HttpGet(url)
+    end)
+    
+    if success then
+        loadstring(result)()
+    else
+        warn("elbilll: Failed to fetch script from " .. url)
+    end
 end
-
-local function doKick()
-    Player:Kick("Tamper Detected! (Error Code: 999)")
-end
-
-task.delay(3, doKick)
