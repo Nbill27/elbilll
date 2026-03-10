@@ -13,8 +13,8 @@ local scripts = {
     [GARDEN_HORIZONS]   = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/GardenHorizons.lua",
     [VIOLENCE_DISTRICT] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/script.lua",
     [CATCH_AND_TAME]    = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/CAT.lua",
-    [LAVA_BRAINROT]    = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/Brainrot.lua",
-    [SNIPER_ARENA]      = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/sa.lua",
+    [LAVA_BRAINROT]    = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/BrainrotHAMA.lua",
+    [SNIPER_ARENA]      = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/SA.lua",
 }
 
 local url = scripts[game.PlaceId]
@@ -32,3 +32,4 @@ if url then
 else
     print("elbilll: Game not registered. Current Place ID: " .. game.PlaceId)
 end
+
