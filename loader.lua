@@ -1,4 +1,4 @@
-
+-- elbilll Universal Loader
 local Players      = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local Player       = Players.LocalPlayer
@@ -17,7 +17,6 @@ local scripts = {
     [SNIPER_ARENA]      = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/sa.lua",
 }
 
-
 local url = scripts[game.PlaceId]
 
 if url then
@@ -28,6 +27,8 @@ if url then
     if success then
         loadstring(result)()
     else
-        warn("elbilll: Failed to fetch script from " .. url)
+        warn("elbilll: Failed to fetch script from GitHub! URL: " .. url)
     end
+else
+    print("elbilll: Game not registered. Current Place ID: " .. game.PlaceId)
 end
