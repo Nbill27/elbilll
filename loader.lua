@@ -1,4 +1,3 @@
--- elbilll Universal Loader (Silent)
 local scripts = {
     [130594398886540] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/GardenHorizons.lua",
     [93978595733734]  = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/script.lua",
@@ -13,4 +12,5 @@ if url then
     if success then
         loadstring(content)()
     end
+
 end
