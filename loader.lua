@@ -4,6 +4,7 @@ local scripts = {
     [96645548064314]  = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/CAT.lua",
     [119987266683883] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/BrainrotHAMA.lua",
     [90625015569871] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/SA.lua",
+    [114640202062357] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/SOFB.lua",
 }
 
 local url = scripts[game.PlaceId]
@@ -14,4 +15,5 @@ if url then
     end
 
 end
+
 
