@@ -1,6 +1,5 @@
 local scripts = {
     [130594398886540] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/GardenHorizons.lua",
-    [93978595733734]  = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/script.lua",
     [96645548064314]  = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/CAT.lua",
     [119987266683883] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/BrainrotHAMA.lua",
     [90625015569871] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/SA.lua",
@@ -16,6 +15,7 @@ if url then
     end
 
 end
+
 
 
 
