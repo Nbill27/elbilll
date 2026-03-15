@@ -8,6 +8,7 @@ local scripts = {
     [122446657157717] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/SA.lua",
     [114640202062357] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/SOFB.lua",
     [83369512629707]  = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/sawahindo.lua",
+    [97365843755210] = " https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/CGRB.lua", 
 }
 
 local placeId = tonumber(game.PlaceId)
