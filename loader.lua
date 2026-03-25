@@ -1,15 +1,10 @@
 task.wait(1) 
 
 local scripts = {
-    [130594398886540] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/GardenHorizons.lua",
-    [93978595733734]  = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/script.lua",
     [96645548064314]  = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/CAT.lua",
     [119987266683883] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/BrainrotHAMA.lua",
-    [122446657157717] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/SA.lua",
     [114640202062357] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/SOFB.lua",
-    [83369512629707]  = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/sawahindo.lua",
     [97365843755210] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/CGRB.lua",
-    [70390793715007] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/hk.lua", 
 }
 
 local placeId = tonumber(game.PlaceId)
