@@ -5,6 +5,7 @@ local scripts = {
     [119987266683883] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/BrainrotHAMA.lua",
     [114640202062357] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/SOFB.lua",
     [97365843755210] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/CGRB.lua",
+    [84514721527976] = "https://raw.githubusercontent.com/Nbill27/elbilll/refs/heads/main/DFB.lua",
 }
 
 local placeId = tonumber(game.PlaceId)
